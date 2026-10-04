@@ -196,20 +196,58 @@ footer{padding:42px 0;border-top:1px solid rgba(24,48,74,.1)}
 .notice{
   padding:14px 16px;border-radius:14px;background:#f3eadf;border:1px solid rgba(24,48,74,.08);font-size:.88rem;color:var(--ink-2)
 }
+
+.real-cover{
+  padding:0;background:#f2ede4;display:block;
+  box-shadow:inset 0 0 0 1px rgba(24,48,74,.06);
+}
+.real-cover:after{display:none}
+.real-cover img{width:100%;height:100%;object-fit:cover;object-position:center}
+.edition-cover{
+  float:left;width:54px;height:70px;margin:0 11px 6px 0;border-radius:7px;overflow:hidden;
+  box-shadow:0 5px 12px rgba(24,48,74,.14);background:#fff
+}
+.edition-cover img{width:100%;height:100%;object-fit:cover}
+.notice:has(.edition-cover){min-height:84px}
+.hero-cover-collage{min-height:560px}
+.hero-book{
+  position:absolute;display:block;border-radius:18px;overflow:hidden;background:#fff;
+  box-shadow:0 22px 55px rgba(24,48,74,.22);border:5px solid rgba(255,255,255,.8);
+  transition:transform .25s ease
+}
+.hero-book:hover{z-index:8}
+.hero-book img{width:100%;height:100%;object-fit:cover}
+.hero-book-a{width:250px;height:350px;right:150px;top:30px;transform:rotate(-8deg);z-index:3}
+.hero-book-a:hover{transform:rotate(-4deg) translateY(-8px)}
+.hero-book-b{width:225px;height:315px;right:10px;top:115px;transform:rotate(8deg);z-index:2}
+.hero-book-b:hover{transform:rotate(4deg) translateY(-8px)}
+.hero-book-c{width:205px;height:285px;right:235px;top:220px;transform:rotate(4deg);z-index:4}
+.hero-book-c:hover{transform:rotate(1deg) translateY(-8px)}
+.echoes-feature{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:start}
+.echoes-cover{width:180px;border-radius:12px;box-shadow:var(--shadow);background:#fff}
+.qr-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.qr-card{
+  text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;
+  text-align:center;box-shadow:0 8px 25px rgba(24,48,74,.06);transition:.2s ease
+}
+.qr-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.qr-card img{width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:12px}
+.qr-card strong{font-family:var(--serif);font-size:1.05rem;line-height:1.15;display:block}
+
 @media(max-width:920px){
   .nav-links{display:none;position:absolute;left:20px;right:20px;top:72px;background:var(--paper);padding:18px;border-radius:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}
   .nav-links.open{display:flex}.nav-links .nav-cta{text-align:center}.mobile-toggle{display:block}
   .hero-grid,.mission-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-  .hero-art{min-height:440px}.books-grid,.flags-grid{grid-template-columns:repeat(2,1fr)}
-  .video-grid{grid-template-columns:1fr 1fr}.band-grid,.cta-box{grid-template-columns:1fr}
+  .hero-art{min-height:500px}.books-grid,.flags-grid{grid-template-columns:repeat(2,1fr)}
+  .video-grid{grid-template-columns:1fr 1fr}.qr-grid{grid-template-columns:repeat(3,1fr)}.band-grid,.cta-box{grid-template-columns:1fr}
   .flags-preview{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}
 }
 @media(max-width:620px){
   .container{width:min(100% - 26px,1160px)}.nav{height:70px}.brand span:last-child{font-size:.92rem}
-  .hero{padding-top:58px}.hero-art{min-height:380px;margin-top:5px}
-  .card-a{width:220px;height:305px;right:80px}.card-b{width:190px;height:255px;right:0}.card-c{width:175px;height:230px;right:135px;top:170px}
+  .hero{padding-top:58px}.hero-art{min-height:430px;margin-top:5px}
+  .hero-book-a{width:190px;height:270px;right:95px;top:24px}.hero-book-b{width:165px;height:235px;right:0;top:105px}.hero-book-c{width:155px;height:220px;right:155px;top:190px}
   .story-card{padding:20px}.story-card h3{font-size:1.5rem}.story-card .motif{font-size:4rem}
-  .books-grid,.flags-grid,.video-grid{grid-template-columns:1fr}.section{padding:70px 0}
+  .books-grid,.flags-grid,.video-grid,.qr-grid{grid-template-columns:1fr}.section{padding:70px 0}
   .flags-preview{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.footer-links{justify-content:flex-start}
-  .cta-box{padding:34px}.quote{padding:28px}
+  .echoes-feature{grid-template-columns:1fr}.echoes-cover{width:160px}.cta-box{padding:34px}.quote{padding:28px}
 }
