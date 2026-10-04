@@ -570,3 +570,32 @@ footer .brand-mark{background:var(--gold);color:#101824}
     box-shadow:var(--dark-shadow);
   }
 }
+
+
+/* ===== Deeper overall canvas ===== */
+:root{
+  --night:#090f17;
+  --night-2:#0d1520;
+  --night-3:#121c28;
+  --panel:#141e2a;
+  --panel-2:#1a2634;
+}
+body{background:#090f17}
+.section{background:#090f17}
+.section-cream{background:#0d1520}
+.section-soft{background:#0b121b}
+.hero{
+  background:
+    radial-gradient(circle at 86% 8%,rgba(163,77,104,.14),transparent 27%),
+    radial-gradient(circle at 7% 90%,rgba(60,111,120,.11),transparent 24%),
+    linear-gradient(145deg,#0a1018 0%,#111a26 56%,#0a1119 100%);
+}
+.hero:before{opacity:.11}
+.hero:after{opacity:.09}
+.page-hero{
+  background:
+    radial-gradient(circle at 84% 18%,rgba(163,77,104,.14),transparent 23%),
+    linear-gradient(145deg,#0b121b,#111b28);
+}
+.page-hero:after{opacity:.11}
+.cta{background:#090f17}
