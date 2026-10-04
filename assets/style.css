@@ -58,22 +58,22 @@
   .home-book-list .cover img{max-height:300px}
   .home-book-list .home-book-copy h2{font-size:30px}
 }
-
 /* Bilingual purchase box */
-.bilingual-box{margin-top:28px;max-width:560px;padding:16px;border:1px solid #bdccc1;border-radius:12px;background:#edf2ec}
-.edition-label{display:flex;flex-direction:column;gap:2px;margin-bottom:12px}
-.edition-label strong{font-size:14px;line-height:1.35;color:var(--ink)}
-.edition-label span{font-size:11px;line-height:1.45;color:var(--muted)}
-.bilingual-box .edition-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}
-.edition-btn{display:flex;align-items:center;justify-content:center;min-height:46px;padding:10px 12px;border:1px solid #8eaa99;border-radius:9px;background:#fbfcf8;color:var(--coral);font-size:13px;font-weight:700;line-height:1.25;text-align:center;transition:background .2s,border-color .2s}
+.bilingual-box{margin-top:20px;max-width:500px;padding:10px 12px;border:1px solid #bdccc1;border-radius:10px;background:#edf2ec}
+.edition-label{margin-bottom:8px}
+.edition-label strong{font-size:12px;line-height:1.25;color:var(--ink)}
+.bilingual-box .edition-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:0}
+.edition-btn{display:flex;align-items:center;justify-content:center;min-height:38px;padding:7px 10px;border:1px solid #8eaa99;border-radius:8px;background:#fbfcf8;color:var(--coral);font-size:11px;font-weight:700;line-height:1.2;text-align:center;transition:background .2s,border-color .2s}
 .edition-btn:hover{background:#ffffff;border-color:#6f917d}
 @media(max-width:800px){
-  .bilingual-box{margin-top:28px;padding:15px;border-radius:11px}
-  .edition-label strong{font-size:15px}
-  .edition-label span{font-size:12px}
-  .bilingual-box .edition-links{gap:10px}
-  .edition-btn{min-height:50px;font-size:13px;padding:10px 8px}
+  .home-book-list .edition-box{margin-top:20px}
+  .bilingual-box{padding:9px 10px;border-radius:9px}
+  .edition-label{margin-bottom:7px}
+  .edition-label strong{font-size:12px}
+  .bilingual-box .edition-links{gap:8px}
+  .edition-btn{min-height:38px;font-size:11px;padding:7px 6px}
 }
 @media(max-width:380px){
-  .bilingual-box .edition-links{grid-template-columns:1fr}
+  .bilingual-box .edition-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .edition-btn{font-size:10px}
 }
